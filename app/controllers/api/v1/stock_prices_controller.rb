@@ -1,6 +1,6 @@
 module Api
   module V1
-    class StockPricesController < ApplicationController
+    class StockPricesController < BaseController
       def show
         price = StockPriceService.new.get_price(params[:symbol])
         if price
