@@ -13,7 +13,6 @@
 ActiveRecord::Schema[8.1].define(version: 2026_02_09_000007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
-  enable_extension "pg_stat_statements"
 
   create_table "holdings", force: :cascade do |t|
     t.decimal "average_cost", precision: 15, scale: 4, default: "0.0"
