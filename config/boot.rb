@@ -4,7 +4,7 @@ require "bundler/setup" # Set up gems listed in the Gemfile.
 require "bootsnap/setup" # Speed up boot time by caching expensive operations.
 
 # Load .env file for local development only (not in test/CI environments)
-unless ENV["RAILS_ENV"] == "test" || ENV["CI"]
+if ENV["RAILS_ENV"] == "development" && !ENV["CI"]
   require "dotenv"
   Dotenv.load(File.expand_path("../../.env", __dir__))
 end
