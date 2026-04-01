@@ -27,7 +27,7 @@ gem "nokogiri", ">= 1.19.1"
 gem "action_text-trix", ">= 2.1.17"
 
 # Load environment variables from .env
-gem "dotenv", require: false, group: [ :development, :test ]
+gem "dotenv", require: false, group: :development
 
 # Testing
 gem "rspec-rails", "~> 7.0", group: [ :development, :test ]
