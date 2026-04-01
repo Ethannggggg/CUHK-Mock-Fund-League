@@ -6,5 +6,6 @@ require "bootsnap/setup" # Speed up boot time by caching expensive operations.
 # Load .env file for local development only (not in test/CI environments)
 if ENV["RAILS_ENV"] == "development" && !ENV["CI"]
   require "dotenv"
-  Dotenv.load(File.expand_path("../../.env", __dir__))
+  env_path = File.expand_path("../.env", __dir__)
+  Dotenv.load(env_path) if File.exist?(env_path)
 end
