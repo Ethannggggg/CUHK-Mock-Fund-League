@@ -1,6 +1,6 @@
 module Api
   module V1
-    class TradesController < ApplicationController
+    class TradesController < BaseController
       def create
         result = TradeExecutionService.new.execute(trade_params)
         if result.success?
